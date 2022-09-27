@@ -1,7 +1,84 @@
 <!DOCTYPE html>
 <html>
-<body>
-<h1>Hello Pranita Bhandarkar. How is Priyam?</h1>
-<p>Hosting</p>
-</body>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Freight Management System - maheshwari trading company, dhule</title>
+    <link rel="stylesheet" href="css/style.css" />
+    <script>
+      function loadDate() {        
+          let today = new Date().toLocaleDateString();
+        }
+    </script>
+  </head>
+
+  <body onload="loadDate();">
+    <div class="container">
+      <span id="title">
+        <h1>Maheshwari Trading Company</h1>
+        <h2>Freight Management System</h2>
+        <span id="now">Today : <script>document.write(new Date().toLocaleDateString()); </script></span>
+        <span id="time">Time : <script>document.write(new Date().toLocaleTimeString()); </script></span>
+      </span>
+      <form action="">
+        <div class="row">
+          <label for="date">Date :</label>
+          <input type="date" name="date" id="date" value="" />
+        </div>
+        
+        <div class="row">
+          <label for="lrno">LRNo :</label>
+          <input type="text" name="lrno" id="lrno" />
+          <label for="lrdate">LR Date :</label>
+          <input type="date" name="lrdate" id="lrdate" />
+        </div>
+
+        <div class="row">
+          <label for="transportname">Transport Name :</label>
+          <input type="text" name="transportname" id="transportname" />
+          <label for="amount">Amount :</label>
+          <input type="number" name="amount" id="amount" step="0.01" class="currency"/>
+        </div>
+        <div class="row">
+          <label for="supplier_details">Supplier Details :</label>
+          <input type="text" name="supplier_details" id="supplier_details" />
+        </div>
+        <div class="row">
+          <label for="supp_inv_no">Supplier Invoice Details :</label>
+          <input type="text" name="supp_inv_no" id="supp_inv_no" />
+          <label for="inv_date">Invoice Date :</label>
+          <input type="date" name="inv_date" id="inv_date" />
+        </div>
+        <div class="row">
+          <label for="material_dtls">Material Details:</label>
+          <input type="text" name="material_dtls" id="material_dtls" />
+          <label for="remarks">Remarks :</label>
+          <input type="text" name="remarks" id="remarks" />
+        </div>
+        <div class="row">
+          <label for="stlno">STL No:</label>
+          <input type="text" name="stlno" id="stlno" />
+          <label for="stldate">STL Date :</label>
+          <input type="date" name="stldate" id="stldate" />
+        </div>
+        <div class="row">
+          <label for="stlpaidamt">STL Paid Amount :</label>
+          <input type="number" name="stlpaidamt" id="stlpaidamt" step="0.01" class="currency" />
+        </div>
+        <div class="row">
+          <label for="stlclaimremark">STL Claim Remarks :</label>
+          <input type="text" name="stlclaimremark" id="stlclaimremark" />
+          <label for="stlclaimamt">STL Claim Amount:</label>
+          <input type="number" name="stlclaimamt" id="stlclaimamt" step="0.01" class="currency"/>
+        </div>
+        <div class="row">
+          <label for="tallyaccname">Tally Account Name :</label>
+          <input type="text" name="tallyaccname" />
+        </div>
+      </form>
+    </div>
+    <div class="bottom-container">
+      <p>Save</p>
+    </div>
+  </body>
 </html>
