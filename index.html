@@ -6,19 +6,31 @@
     <title>Freight Management System - maheshwari trading company, dhule</title>
     <link rel="stylesheet" href="css/style.css" />
     <script>
-      function loadDate() {        
+      function loadDate() {
+        document.addEventListener("DOMContentLoaded", function () {
           let today = new Date().toLocaleDateString();
-        }
+          var options = {
+            defaultDate: new Date(today),
+            setDefaultDate: true,
+          };
+          var elems = document.getElementsByTagName("input");
+
+          array.forEach((element) => {
+            element.value = today;
+          });
+
+          var instance = M.Datepicker.init(elems, options);
+          instance.setDate(new Date(today));
+        });
+      }
     </script>
   </head>
 
   <body onload="loadDate();">
     <div class="container">
-      <span id="title">
+      <span style="text-align: center;">
         <h1>Maheshwari Trading Company</h1>
         <h2>Freight Management System</h2>
-        <span id="now">Today : <script>document.write(new Date().toLocaleDateString()); </script></span>
-        <span id="time">Time : <script>document.write(new Date().toLocaleTimeString()); </script></span>
       </span>
       <form action="">
         <div class="row">
@@ -76,9 +88,6 @@
           <input type="text" name="tallyaccname" />
         </div>
       </form>
-    </div>
-    <div class="bottom-container">
-      <p>Save</p>
     </div>
   </body>
 </html>
